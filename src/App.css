@@ -9,10 +9,22 @@ html {
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  background: rgb(41, 40, 40);
-  color: white;
-  height: 60px;
 }
 .Main {
-  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Card {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10%;
+  box-shadow: cadetblue;
+}
+.Btn {
+  text-align: center;
+}
+.Btn > a {
+  text-decoration: none;
 }
