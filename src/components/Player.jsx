@@ -8,7 +8,7 @@ const Player = ({ code }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const spotifyApi = new SpotifyWebApi({
-    clientId: "b2cc798a3c574821a3d91efcd4159124",
+    clientId: process.env.CLIENT_ID,
     accessToken: code,
   });
   useEffect(() => {
@@ -16,7 +16,7 @@ const Player = ({ code }) => {
       spotifyApi.getMySavedAlbums({ offset: 1, limit: 10 }).then((data) => {
         const rndInt = Math.floor(Math.random() * data.body.items.length) + 1;
         console.log(
-          "dd",
+          "check",
           rndInt,
           data.body.items[rndInt - 1].album.artists[0].uri
         );
