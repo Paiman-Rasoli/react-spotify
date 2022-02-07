@@ -1,5 +1,4 @@
 import { useEffect, useState, useMemo } from "react";
-import spotifyApi from "spotify-web-api-node";
 import Player from "./components/Player";
 import "./App.css";
 
