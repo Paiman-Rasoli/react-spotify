@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
 
 export default function App() {
@@ -34,6 +34,7 @@ export default function App() {
   // if user logedin, then send the code to backend to get the access and refresh token
   useEffect(() => {
     if (callbackCode) {
+      new URLSearchParams(window.location.search).set("loged", "true");
       fetch("http://localhost:800/api/spotify/connect", {
         method: "POST",
         headers: {
